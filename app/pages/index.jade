@@ -1,6 +1,68 @@
 extends /blocks/layout-default/layout-default
 
+include /blocks/input/input
+include /blocks/checkbox/checkbox
+include /blocks/radio/radio
+
 block head
 	- var pageTitle = 'Дело';
 
 block content
+	.wrapper
+		+b("section").personal-data
+			+input("fullname", "Свистунов Александр Евгеньевич", "Полное ФИО")
+			+input("year-birth", "1995", "Год рождения")
+			+input("location", "г. Санкт-Петербург, Россия", "Место жительства")
+			+input("skype", "alexsvistunov73@yandex.ru", "Скайп")
+			+input("e-mail", "alexsvistunov73@gmail.com", "Почта")
+
+		+b("section").skils
+			+e("h3").title Расскажите о себе чекбоксами
+			+e("p").description Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+			+e.checkbox-container
+				+e.column-1
+					+checkbox("БЭМ/OOCSS", "methodology", "methodology", "checked")
+					+checkbox("Pug (Jade)", "pug", "pug", "checked")
+					+checkbox("Stylus/LESS/SASS", "preproc", "preproc", "checked")
+					+checkbox("Работаю с SVG", "svg", "svg", "checked")
+					+checkbox("Верстаю семантично", "html5", "html5", "checked")
+					+checkbox("Accessibility (A11Y)", "accessibility", "accessibility")
+					+checkbox("ES2015/ES2016", "ecmascript", "ecmascript", "checked")
+
+				+e.column-2
+					+checkbox("Gulp/GRUNT", "gulp-grunt", "gulp-grunt", "checked")
+					+checkbox("Webpack", "webpack", "webpack")
+					+checkbox("Дружу с WebGL", "webgl", "webgl")
+					+checkbox("jQuery", "jquery", "jquery", "checked")
+					+checkbox("Знаю/изучаю Angular", "angular", "angular")
+					+checkbox("Знаю/изучаю React", "react", "react", "checked")
+					+checkbox("Знаю/изучаю Node.js", "nodejs", "nodejs", "checked")
+				+e.column-3
+					+checkbox("Использую Git", "git", "git", "checked")
+					+checkbox("С глазомером всё ок", "accurate-eye", "accurate-eye", "checked")
+					+checkbox("Читаю blog.csssr.ru", "blog", "blog", "checked")
+					+checkbox("Я ленивый(-ая)", "lazy", "lazy")
+					+checkbox("У меня хороший английский", "english", "english")
+
+		+b("section").javascript-level
+			+e("h3").title Уровень владения Javascript
+
+		+b("section").about-me
+			+e("h3").title Расскажите о себе словами
+			+e("p").description Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
+			+e.input-container
+				+input("about-me-1", "")
+				+input("about-me-2", "")
+				+input("about-me-3", "")
+
+		+b("section").outlook
+			+e("h3").title Какие у вас планы на будущее
+			+e("p").description Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
+			+e.radio-container
+				+radio("Верстать", "outlook", "html-css", "html-css")
+				+radio("Прокачиваться в JS", "outlook", "javascript", "javascript", "checked")
+				+radio("Менеджерство", "outlook", "management", "management")
+				+radio("Другое", "outlook", "other", "other")
+
+		+b("section").date-of-completion
+			+input("date-of-completion", "18.09.2017", "Дата заполнения")

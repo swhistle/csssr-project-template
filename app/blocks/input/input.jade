@@ -1,0 +1,5 @@
+mixin input(name, value, label)
+    +b.input&attributes(attributes)
+        if label
+            +e("label").label #{label}
+        +e("input").text(type="text", name="#{name}", id="#{name}" value="#{value}")

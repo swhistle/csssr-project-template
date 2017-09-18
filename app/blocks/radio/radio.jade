@@ -1,0 +1,7 @@
+mixin radio(label, name, id, value, checked)
+	+b.radio&attributes(attributes)
+		if checked
+			+e("input").field(type="radio", name="#{name}", id="#{id}", value="#{value}" checked)
+		else
+			+e("input").field(type="radio", name="#{name}", id="#{id}", value="#{value}")
+		+e("label").label(for="#{id}") #{label}
