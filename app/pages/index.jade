@@ -9,6 +9,10 @@ block head
 
 block content
 	.wrapper
+		+b.logo
+			+e("img")(src="logo.png", alt="CSSSR")
+			+e("img")(src="dossier.png", alt="ДЕЛО")
+			+e("img")(src="print.png", alt="СЕКРЕТНО")
 		+b("section").personal-data
 			+input("fullname", "Свистунов Александр Евгеньевич", "Полное ФИО")
 			+input("year-birth", "1995", "Год рождения")
