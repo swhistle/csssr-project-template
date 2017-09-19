@@ -1,2 +1,38 @@
 .input
-	display block
+	display flex
+	flex-wrap nowrap
+	justify-content space-between
+	align-items flex-start
+
+	&--date
+		justify-content flex-start
+
+	&__label
+		display block
+		align-self flex-end
+		margin-right 15px
+		font-size 22px
+		line-height 1.2
+		margin-bottom -3px
+		font-family PTSans
+		font-weight bold
+
+	&__text
+		display block
+		flex-grow 3
+		height 60px
+		font-size 30px
+		line-height 1.2
+		color color-text-input
+		background none
+		border none
+		background-image url('../../line.png')
+		background-repeat  no-repeat
+		background-position bottom
+		padding-top 13px
+		padding-left 10px
+		font-family CourierNew
+
+	&--date  &__text
+		flex-grow 0
+		width 205px

@@ -13,6 +13,7 @@ block content
 			+e("img")(src="logo.png", alt="CSSSR").logo
 			+e("img")(src="dossier.png", alt="ДЕЛО").dossier
 			+e("img")(src="print.png", alt="СЕКРЕТНО").print
+
 		+b("section").personal-data
 			+input("fullname", "Свистунов Александр Евгеньевич", "Полное ФИО")
 			+input("year-birth", "1995", "Год рождения")
@@ -69,4 +70,4 @@ block content
 				+radio("Другое", "outlook", "other", "other")
 
 		+b("section").date-of-completion
-			+input("date-of-completion", "18.09.2017", "Дата заполнения")
+			+input("date-of-completion", "18.09.2017", "Дата заполнения").input--date
