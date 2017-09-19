@@ -1,2 +1,43 @@
 .radio
-	display block
+	margin-bottom 20px
+	cursor pointer
+
+	input[type="radio"]
+		display none
+
+	input[type="radio"]:checked + &__label::after
+		display block
+
+	&__label
+		display inline-block
+		max-width 230px
+		font-size 20px
+		font-family PTSans
+		font-weight bold
+		color color-label
+		line-height 1.25
+		padding-left 35px
+		position relative
+		cursor pointer
+
+		&::before,
+		&::after
+			display block
+			content ''
+			position absolute
+			background url('../../spritesheet.png') no-repeat
+
+		&::before
+			top 0px
+			left 0
+			width 26px
+			height 26px
+			background-position -317px -24px
+
+		&::after
+			display none
+			top 7px
+			left 7px
+			width 12px
+			height 12px
+			background-position -262px -18px
