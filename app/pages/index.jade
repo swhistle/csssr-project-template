@@ -21,9 +21,9 @@ block content
 			+input("skype", "alexsvistunov73@yandex.ru", "Скайп")
 			+input("e-mail", "alexsvistunov73@gmail.com", "Почта")
 
-		+b("section").skils
-			+e("h3").title Расскажите о себе чекбоксами
-			+e("p").description Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+		+b("section").skills
+			h3.title Расскажите о себе чекбоксами
+			p.description Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
 			+e.checkbox-container
 				+e.column-1
 					+checkbox("БЭМ/OOCSS", "methodology", "methodology", "checked")
@@ -42,6 +42,7 @@ block content
 					+checkbox("Знаю/изучаю Angular", "angular", "angular")
 					+checkbox("Знаю/изучаю React", "react", "react", "checked")
 					+checkbox("Знаю/изучаю Node.js", "nodejs", "nodejs", "checked")
+
 				+e.column-3
 					+checkbox("Использую Git", "git", "git", "checked")
 					+checkbox("С глазомером всё ок", "accurate-eye", "accurate-eye", "checked")
@@ -50,19 +51,19 @@ block content
 					+checkbox("У меня хороший английский", "english", "english")
 
 		+b("section").javascript-level
-			+e("h3").title Уровень владения Javascript
+			h3.title Уровень владения Javascript
 
 		+b("section").about-me
-			+e("h3").title Расскажите о себе словами
-			+e("p").description Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
+			h3.title Расскажите о себе словами
+			p.description Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
 			+e.input-container
 				+input("about-me-1", "")
 				+input("about-me-2", "")
 				+input("about-me-3", "")
 
 		+b("section").outlook
-			+e("h3").title Какие у вас планы на будущее
-			+e("p").description Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
+			h3.title Какие у вас планы на будущее
+			p.description Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
 			+e.radio-container
 				+radio("Верстать", "outlook", "html-css", "html-css")
 				+radio("Прокачиваться в JS", "outlook", "javascript", "javascript", "checked")
