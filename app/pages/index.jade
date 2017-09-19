@@ -52,11 +52,14 @@ block content
 
 		+b("section").javascript-level
 			h3.title Уровень владения Javascript
-			+e("ul").list
-				+e("li").item Не владею
-				+e("li").item Использую готовые решения
-				+e("li").item Использую готовые решения и умею их переделывать
-				+e("li").item Пишу сложный JS c нуля
+			+e.bar-container
+				+e("img")(src="toddler.png").toddler.js-toddler
+				+e("img")(src="line.png").bar
+				+e("ul").list
+					+e("li").item Не владею
+					+e("li").item Использую готовые решения
+					+e("li").item Использую готовые решения и умею их переделывать
+					+e("li").item Пишу сложный JS c нуля
 
 		+b("section").about-me
 			h3.title Расскажите о себе словами

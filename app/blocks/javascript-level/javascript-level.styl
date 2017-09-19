@@ -1,8 +1,68 @@
 .javascript-level
 	padding-top 50px
 
+	&__bar-container
+		height 75px
+		margin-top 30px
+		position relative
+
 	&__list
+		width 100%
 		display flex
 		justify-content space-between
 		align-items flex-start
-		padding-top 20px
+		position absolute
+		top 0
+		left 0
+
+	&__item
+		max-width 175px
+		padding-top 30px
+		font-size 13px
+		line-height 1.5
+		color color-text-title
+		font-family PTSans
+		font-weight bold
+		position relative
+
+		&::before
+			display block
+			content ''
+			position absolute
+			background url('../../spritesheet.png') no-repeat
+			width 3px
+			height 23px
+			top 2px
+			background-position -15px -15px
+
+		&:first-child::before
+			left -1px
+
+		&:nth-child(2)::before
+			top 4px
+			left 5px
+			height 9px
+			background-position -162px -15px
+
+		&:nth-child(3)::before
+			top 4px
+			left 0px
+			height 9px
+			background-position -162px -15px
+
+		&:last-child::before
+			right -1px
+
+	&__bar
+		display block
+		width 100%
+		position absolute
+		top 0
+		left 0
+
+	&__toddler
+		display block
+		position absolute
+		top -15px
+		left 66%
+		cursor pointer
